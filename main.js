@@ -43,9 +43,11 @@ function map(array, func) {
 // Note: please write one or two lines here describing your solution.
 // var strArr = ['hello', 'world', 'whirled', 'peas'];
 // uppercaseAll(strArr); ==> [ 'HELLO', 'WORLD', 'WHIRLED', 'PEAS' ]
+//here i will return the map and in its anonymos function I will put the touppercase command to change my array
 
 function uppercaseAll(arrayOfStrings) {
   // TODO: your code here
+  return map(arrayOfStrings,function(elem,index){return elem.toUpperCase()})
 
 }
 
@@ -79,7 +81,7 @@ var data = [
 
 function highestPopulation(arrayOfObjects) {
   // TODO: your code here
-
+return filter (arrayOfObjects, function(element,key){return element.population>500000000})
 }
 
 //=============================================================================
@@ -94,7 +96,7 @@ function highestPopulation(arrayOfObjects) {
 
 function halveAll(numbers) {
   // your code is here
-
+return map(numbers,function(element,index){return element/2})
 }
 
 //=============================================================================
@@ -106,8 +108,8 @@ function halveAll(numbers) {
 
 function values(obj) {
   // your code is here
-
+each(obj,function(element,key){element[key]})
+return obj
 }
-
 
 //Good Luck :))
